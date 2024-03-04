@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-df = pd.read_csv("india.csv")
+df = pd.read_csv("India 2024-01-01 to 2024-03-18.csv")
 print(df)
 print(df.info())
 
@@ -20,7 +20,7 @@ print(df)
 print(df.isnull().sum())
 print(df.dtypes)
 
-df =pd.read_csv("india.csv" , index_col = "datetime")
+df =pd.read_csv("India 2024-01-01 to 2024-03-18.csv" , index_col = "datetime")
 print(df)
 
 print(df.index)
@@ -71,7 +71,7 @@ y = df['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Instantiate the Ridge model
-ridge_model = Ridge(alpha=10.0)  # You can adjust the alpha parameter as needed
+ridge_model = Ridge(alpha=1.0)  # You can adjust the alpha parameter as needed
 
 # Train the Ridge model
 ridge_model.fit(X_train, y_train)
@@ -86,30 +86,30 @@ print("Mean Squared Error:", mse)
 
 # Taking new data for prediction...all the input values
 new_data =pd.DataFrame({
-    'tempmax' : [22.3],
-    'tempmin': [12.4],
-    'temp' : [16.8],
-    'feelslikemax':[22.3],
-    'feelslikemin':[12.4],
-       'feelslike':[16.8],
-    'dew':[10.4],
-    'humidity':[67.2],
-    'precip':[13],
-    'precipprob':[6.5],
-    'precipcover':[37.5],
-       'snow':[0],
-    'snowdepth':[0],
-    'windgust':[40.7],
-    'windspeed':[25.9],
-    'winddir':[68.8],
-       'sealevelpressure':[1009],
-    'cloudcover':[31.3],
-    'visibility':[22.7],
-    'solarradiation':[196.9],
-       'solarenergy':[16.9],
-    'uvindex':[7],
-    'severerisk':[30],
-    'moonphase':[0.42]
+    'tempmax' : [16.0],
+    'tempmin': [9.2],
+    'temp' : [12.8],
+    'feelslikemax':[16.0],
+    'feelslikemin':[9.2],
+       'feelslike':[12.8],
+    'dew':[12.2],
+    'humidity':[96.2],
+    'precip':[9.275],
+    'precipprob':[100.0],
+    'precipcover':[12.5],
+       'snow':[0.0],
+    'snowdepth':[0.0],
+    'windgust':[19.4],
+    'windspeed':[14.8],
+    'winddir':[72.5],
+       'sealevelpressure':[1016.0],
+    'cloudcover':[95.3],
+    'visibility':[0.5],
+    'solarradiation':[89.4],
+       'solarenergy':[7.6],
+    'uvindex':[5.0],
+    'severerisk':[10.0],
+    'moonphase':[0.68]
 })
 
 
