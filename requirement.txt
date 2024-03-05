@@ -1,0 +1,5 @@
+pandas 
+matplolib
+scikitlearn
+pickle 
+streamlit
